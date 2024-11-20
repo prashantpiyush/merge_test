@@ -7,12 +7,12 @@ models:
     tests:
     - unique:
         config:
-          fail_calc: "count(1)"
+          fail_calc: "count(10)"
+          error_if: " > 10 "
           warn_if: " >= 0 "
-          where: "B != 100"
-          severity: "warn"
+          where: "B != 100 "
+          severity: "error"
           store_failures: true
-          error_if: " > 100 "
     dataType:
       type: "Integer"
   - name: "B"
