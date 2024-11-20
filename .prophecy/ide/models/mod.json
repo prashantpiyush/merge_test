@@ -1,0 +1,84 @@
+{
+  "id" : "mod",
+  "metainfo" : {
+    "label" : "mod",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "mod##Nn5cnf3H" : {
+      "id" : "mod##Nn5cnf3H",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "mod",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM SQLStatement_1\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "RyK2EyiI",
+          "slug" : "SQLStatement_1"
+        } ],
+        "outputs" : [ {
+          "id" : "ttp8RyGq",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "GXM0nSQNjKdw00c7b9Vyw$$hiAJ-jW_P8CqmANrYN5hI" : {
+      "id" : "GXM0nSQNjKdw00c7b9Vyw$$hiAJ-jW_P8CqmANrYN5hI",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "SQLStatement_1",
+        "slug" : "SQLStatement_1",
+        "x" : -180,
+        "y" : 40,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "out",
+          "id" : "out",
+          "language" : "sql",
+          "content" : "select 1 as A, 2 as B"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "OFRgmnm4GDoLXGSrABjYh$$cyWDEte2_Ti7Rjf-O7pee",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "s9LI2ScldugU5k4EHp3j-$$I4eu5q4maaTRyP712bz9y",
+    "source" : "GXM0nSQNjKdw00c7b9Vyw$$hiAJ-jW_P8CqmANrYN5hI",
+    "sourcePort" : "OFRgmnm4GDoLXGSrABjYh$$cyWDEte2_Ti7Rjf-O7pee",
+    "target" : "mod##Nn5cnf3H",
+    "targetPort" : "RyK2EyiI"
+  } ],
+  "component" : "Model"
+}
