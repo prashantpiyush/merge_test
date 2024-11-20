@@ -8,11 +8,11 @@ models:
     - unique:
         config:
           fail_calc: "count(1)"
-          warn_if: " >= 0 "
-          where: "B != 100"
-          severity: "warn"
-          store_failures: true
           error_if: " > 100 "
+          warn_if: " >= 0 "
+          where: "B != 10"
+          severity: "error"
+          store_failures: true
     dataType:
       type: "Integer"
   - name: "B"
