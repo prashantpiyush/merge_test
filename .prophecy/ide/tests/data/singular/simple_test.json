@@ -9,10 +9,10 @@
     },
     "graphConfig" : {
       "entityConfig" : {
-        "error_if" : "\"!= 0\"",
-        "fail_calc" : "\"count(1)\"",
         "limit" : "\"10\"",
+        "fail_calc" : "\"count(1)\"",
         "severity" : "\"warn\"",
+        "error_if" : "\"!= 0\"",
         "warn_if" : "\"!= 1\"",
         "type" : "TestConfig"
       },

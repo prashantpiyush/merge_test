@@ -9,9 +9,9 @@
     },
     "graphConfig" : {
       "entityConfig" : {
+        "alias" : "\"simple_model_1\"",
         "materialized" : "materialized_view",
         "schema" : "\"pp_test\"",
-        "alias" : "\"simple_model_1\"",
         "type" : "ModelConfig"
       },
       "userDefinedConfig" : {
