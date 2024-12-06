@@ -9,66 +9,69 @@
     },
     "graphConfig" : {
       "entityConfig" : {
-        "limit" : "\"10\"",
-        "fail_calc" : "\"count(1)\"",
-        "severity" : "\"warn\"",
         "error_if" : "\"!= 0\"",
+        "fail_calc" : "\"count(1)\"",
+        "limit" : "\"10\"",
+        "severity" : "\"warn\"",
         "warn_if" : "\"!= 1\"",
         "type" : "TestConfig"
+      },
+      "userDefinedConfig" : {
+        "vars" : { }
       }
     },
     "version" : 3
   },
   "processes" : {
-    "simple_test##iBKVSObW" : {
-      "id" : "simple_test##iBKVSObW",
-      "component" : "TargetSingularDataTest",
-      "metadata" : {
-        "label" : "simple_test",
-        "x" : 20,
-        "y" : 20,
-        "phase" : 0,
-        "macroDependencies" : [ ]
-      },
-      "properties" : {
-        "query" : "SELECT * \n\nFROM simple_model\n",
-        "customQuery" : false,
-        "customQueryDisabled" : true
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "HomUxtog",
-          "slug" : "simple_model"
-        } ],
-        "outputs" : [ {
-          "id" : "RwYwfeLk",
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      }
-    },
-    "NrF79-L7_P800Ust1Ahs6" : {
-      "id" : "NrF79-L7_P800Ust1Ahs6",
+    "simple_model##Wyu3XPS3" : {
+      "id" : "simple_model##Wyu3XPS3",
       "component" : "Model",
       "metadata" : {
         "label" : "simple_model",
-        "slug" : "simple_model",
-        "x" : -140,
+        "x" : 20,
         "y" : 20,
-        "phase" : 0
+        "phase" : 0,
+        "isLabelGrayed" : false
       },
       "properties" : {
         "table" : {
           "name" : "simple_model",
-          "sourceType" : "Model",
-          "alias" : ""
+          "sourceType" : "Model"
         }
       },
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "OXonBzoD9nIcaGsNUv8pv",
+          "id" : "kUerEtHh",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "index" : 0
+    },
+    "final##ANbH5GSk" : {
+      "id" : "final##ANbH5GSk",
+      "component" : "TargetSingularDataTest",
+      "metadata" : {
+        "label" : "simple_test",
+        "x" : 220,
+        "y" : 20,
+        "phase" : 0,
+        "isLabelGrayed" : false
+      },
+      "properties" : {
+        "query" : "SELECT *\n\nFROM simple_model\n",
+        "customQuery" : false,
+        "customQueryDisabled" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "jK4icf2k",
+          "slug" : "simple_model"
+        } ],
+        "outputs" : [ {
+          "id" : "rOh2C6F6",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -77,11 +80,11 @@
     }
   },
   "connections" : [ {
-    "id" : "4fXtyqqvgvbcAp6thrJeH$$XKi-z4ZMcerI3cSF-c9nc",
-    "source" : "NrF79-L7_P800Ust1Ahs6",
-    "sourcePort" : "OXonBzoD9nIcaGsNUv8pv",
-    "target" : "simple_test##iBKVSObW",
-    "targetPort" : "HomUxtog"
+    "id" : "Dnrmcu9E",
+    "source" : "simple_model##Wyu3XPS3",
+    "sourcePort" : "kUerEtHh",
+    "target" : "final##ANbH5GSk",
+    "targetPort" : "jK4icf2k"
   } ],
   "component" : "SingularDataTest"
 }
