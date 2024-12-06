@@ -1,0 +1,87 @@
+{
+  "id" : "simple_test",
+  "metainfo" : {
+    "label" : "simple_test",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "limit" : "\"10\"",
+        "fail_calc" : "\"count(1)\"",
+        "severity" : "\"warn\"",
+        "error_if" : "\"!= 0\"",
+        "warn_if" : "\"!= 1\"",
+        "type" : "TestConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "simple_test##iBKVSObW" : {
+      "id" : "simple_test##iBKVSObW",
+      "component" : "TargetSingularDataTest",
+      "metadata" : {
+        "label" : "simple_test",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "query" : "SELECT * \n\nFROM simple_model\n",
+        "customQuery" : false,
+        "customQueryDisabled" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "HomUxtog",
+          "slug" : "simple_model"
+        } ],
+        "outputs" : [ {
+          "id" : "RwYwfeLk",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "NrF79-L7_P800Ust1Ahs6" : {
+      "id" : "NrF79-L7_P800Ust1Ahs6",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "simple_model",
+        "slug" : "simple_model",
+        "x" : -140,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "simple_model",
+          "sourceType" : "Model",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "OXonBzoD9nIcaGsNUv8pv",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "4fXtyqqvgvbcAp6thrJeH$$XKi-z4ZMcerI3cSF-c9nc",
+    "source" : "NrF79-L7_P800Ust1Ahs6",
+    "sourcePort" : "OXonBzoD9nIcaGsNUv8pv",
+    "target" : "simple_test##iBKVSObW",
+    "targetPort" : "HomUxtog"
+  } ],
+  "component" : "SingularDataTest"
+}

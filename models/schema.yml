@@ -1,0 +1,12 @@
+---
+version: 2
+models:
+- name: "simple_model"
+  columns:
+  - name: "a"
+    dataType:
+      type: "Integer"
+  - name: "b"
+    dataType:
+      type: "Integer"
+  tests: []
