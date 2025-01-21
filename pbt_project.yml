@@ -26,16 +26,7 @@ subgraphs: {}
 sqlModels:
   .prophecy/metadata/sqlmodels/simple_model:
     name: simple_model
-    schema:
-      entityType: ''
-      providerType: Databricks
-      fields:
-      - name: a
-        dataType:
-          type: Integer
-      - name: b
-        dataType:
-          type: Integer
+    schema: null
     description: null
     author: prashantpiyush@prophecy.io
     files:
