@@ -64,13 +64,31 @@ sqlMacros:
 sqlSeeds: {}
 sqlSources: {}
 sqlUnreferencedSources: {}
+sqlOrchestratorPipelines: {}
+sqlBusinessApps: {}
 sqlPipeline:
   name: sqlPipeline
   description: null
   author: prashantpiyush@prophecy.io
   createdAt: '2024-12-06 05:08:17'
 dependencies: []
-projectDependencies: {}
+projectDependencies:
+  '99':
+    projectUID: 99
+    projectName: ProphecyDatabricksSqlBasics
+    repositoryPath: gitUri=https://github.com/prophecy-io/databricks-sql-basics&subPath=
+    version: 0.0.1
+    isDefault: true
+    author: null
+    createdAt: '2025-04-08 18:36:03'
+  '100':
+    projectUID: 100
+    projectName: ProphecySnowflakeSqlBasics
+    repositoryPath: gitUri=https://github.com/prophecy-io/snowflake-sql-basics&subPath=
+    version: 0.0.1
+    isDefault: true
+    author: null
+    createdAt: '2025-04-08 18:36:03'
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}

@@ -9,7 +9,6 @@ require-dbt-version:
 version: "0.1"
 profile: "prophecy-default"
 
-
 # ==================
 # File Path Configs
 # ==================
@@ -25,10 +24,3 @@ model-paths:
 macro-paths:
 - "macros"
 target-path: "target"
-
-
-# ==================
-# Model Configs
-# ==================
-models: null
-

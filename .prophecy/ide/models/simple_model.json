@@ -22,7 +22,23 @@
         }
       }
     },
-    "version" : 3
+    "version" : 3,
+    "properties" : {
+      "name" : "simple_model",
+      "columns" : [ {
+        "name" : "a",
+        "dataType" : {
+          "type" : "Integer"
+        }
+      }, {
+        "name" : "b",
+        "dataType" : {
+          "type" : "Integer"
+        }
+      } ],
+      "tests" : [ ],
+      "providerType" : "databricks"
+    }
   },
   "processes" : {
     "simple_model##dWLO8ICr" : {
@@ -40,6 +56,7 @@
         "customQuery" : false,
         "incrementalEditorDisabled" : true,
         "query" : "SELECT * \n\nFROM SQLStatement_1\n",
+        "isModel" : true,
         "incrementalKey" : false,
         "incremental" : {
           "expression" : "true"
